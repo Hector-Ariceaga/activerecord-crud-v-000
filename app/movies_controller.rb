@@ -34,9 +34,7 @@ def can_be_created_in_a_block(args = {})
 end
 
 def can_get_the_first_item_in_the_database
-  binding.pry
-  movie_data = Movie.first
-  first_movie = Movie.create(movie_data)
+  Movie.first
 end
 
 def can_get_the_last_item_in_the_database
