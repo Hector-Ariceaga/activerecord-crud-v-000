@@ -22,11 +22,10 @@ def can_be_created_with_a_hash_of_attributes
   movie = Movie.create(attributes)
 end
 
-def can_be_created_in_a_block(args = {})
+def can_be_created_in_a_block(args)
   Movie.create do |m|
     binding.pry
     args.each do |attribute, value|
-      
       m.send("#{attribute}=", value)
     end 
   end
