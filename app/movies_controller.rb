@@ -24,7 +24,9 @@ end
 
 def can_be_created_in_a_block(args = {})
   Movie.create do |m|
-    m(args)
+    args.each do |attribute,value|
+      m.attribute = value
+    end
   end
 end
 
